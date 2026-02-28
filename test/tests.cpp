@@ -73,13 +73,13 @@ TEST(NextPrimeTest, MaxValue) {
 }
 
 TEST(SumPrimeTest, SumBelowSmallBounds) {
-    EXPECT_EQ(sumPrime(2), 0);  
-    EXPECT_EQ(sumPrime(3), 2); 
-    EXPECT_EQ(sumPrime(6), 10); 
+    EXPECT_EQ(sumPrime(2), 0);
+    EXPECT_EQ(sumPrime(3), 2);
+    EXPECT_EQ(sumPrime(6), 10);
 }
 
 TEST(SumPrimeTest, SumBelowLargerBounds) {
-    EXPECT_EQ(sumPrime(11), 28); 
     EXPECT_EQ(sumPrime(11), 17);
+    EXPECT_EQ(sumPrime(12), 28);
     EXPECT_EQ(sumPrime(20), 77);
 }
