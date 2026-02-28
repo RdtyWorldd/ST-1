@@ -11,7 +11,6 @@ bool checkPrime(uint64_t value) {
   if (value == 2 || value == 3) {
     return true;
   }
-  
   for (uint64_t i = 2; i * i <= value; i++) {
     if ((value % i) == 0) {
       return false;
@@ -42,7 +41,7 @@ uint64_t nextPrime(uint64_t value) {
   }
 
   uint64_t next = value + 1;
-  while(!checkPrime(next)) next++;
+  while (!checkPrime(next)) next++;
   return next;
 }
 
@@ -50,12 +49,12 @@ uint64_t sumPrime(uint64_t hbound) {
   if (hbound <= 2) {
     return 0;
   }
-  
+
   std::vector<bool> is_prime(hbound, true);
   is_prime[0] = false;
   is_prime[1] = false;
 
-  for(uint64_t i = 2; i * i < hbound; i++) {
+  for (uint64_t i = 2; i * i < hbound; i++) {
     if (is_prime[i]) {
       for (uint64_t j = i * i; j < hbound; j += i) {
         is_prime[j] = false;
